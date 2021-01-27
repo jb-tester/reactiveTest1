@@ -20,4 +20,5 @@ public interface UserRepo1 extends ReactiveCrudRepository<User, BigInteger> {
     Flux<User> findByAgeBetween(int age, int age2);
     Flux<User> findByReferencesContaining(Flux<String> references);
     Mono<User> getFirstByName(Mono<String> name);
+    Mono<Boolean> existsByAgeGreaterThan(int ager);
 }
